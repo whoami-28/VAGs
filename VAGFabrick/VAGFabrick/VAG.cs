@@ -1,41 +1,27 @@
-﻿using System;
-using System.Xml.Linq;
-using System.Collections.Generic;
-using VAGFabric;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace VAGFabric
 {
-    class VAG
+    public class VAG
     {
-        private readonly string _name;
-        private int _quantity;
-        private readonly int _tankVolume;
-        private readonly string _carCase;
-        private double _fuelQuantity;
-        private double _fuelConsumption;
-        public string Name {get { return _name; }}
-        public int Quantity
-        {
-            get { return _quantity; }
-            set { _quantity = value; }
-        }
-        public int TankVolume{get { return _tankVolume; }}
-        public string CarCase{get { return _carCase; }}
-        public double FuelQuantity
-        {
-            get { return _fuelQuantity; }
-            set { _fuelQuantity = value; }
-        }
-        public double FuelConsumtion{get { return _fuelConsumption; }}
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Quantity { get; set; }
+        public int TankVolume { get; set; }
+        public string CarCase { get; set; }
+        public double FuelQuantity { get; set; }
+        public double FuelConsumption { get; set; }
+
+        public VAG() { }
+
         public VAG(string name, int quantity, int tankVolume, string carCase, double fuelQuantity, double fuelConsumption)
         {
-            _name = name;
-            _quantity = quantity;
-            _tankVolume = tankVolume;
-            _carCase = carCase;
-            _fuelQuantity = fuelQuantity;
-            _fuelConsumption = fuelConsumption;
+            Name = name;
+            Quantity = quantity;
+            TankVolume = tankVolume;
+            CarCase = carCase;
+            FuelQuantity = fuelQuantity;
+            FuelConsumption = fuelConsumption;
         }
         public override string ToString()
         {
@@ -54,15 +40,15 @@ namespace VAGFabric
         }
         public void CarDrive(ListBox listBox)
         {
-            this.FuelQuantity = this.FuelQuantity - this.FuelConsumtion;
+            this.FuelQuantity = this.FuelQuantity - this.FuelConsumption;
             string logMessage;
-            if (this.FuelQuantity < 0 || this.FuelQuantity == 0)
+            if (this.FuelQuantity <= 0)
             {
                 logMessage = $"[LOG] В машине {this.Name} закончилось топливо!!!";
             }
             else
             {
-                logMessage = $"[LOG] Машина {this.Name} проехала 100 км и израсходовала {this.FuelConsumtion}. Остаток топлива={this.FuelQuantity}.";
+                logMessage = $"[LOG] Машина {this.Name} проехала 100 км и израсходовала {this.FuelConsumption}. Остаток топлива={this.FuelQuantity}.";
             }
             listBox.Items.Add(logMessage);
         }

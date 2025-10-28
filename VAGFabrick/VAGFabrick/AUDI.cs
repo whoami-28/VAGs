@@ -5,9 +5,11 @@ using VAGFabric;
 
 namespace VAGFabric
 {
-    class AUDI : Volkswagen
+    public class AUDI : VAG
     {
-        public AUDI(string name, int quantity, int tankVolume, string carCase, double fuelQuantity, double fuelConsumption) : base(name, quantity, tankVolume, carCase, fuelQuantity, fuelConsumption)
-            { }
+        public AUDI() { }
+        public AUDI(string name, int quantity, int tankVolume, string carCase, double fuelQuantity, double fuelConsumption)
+            : base(name, quantity, tankVolume, carCase, fuelQuantity, fuelConsumption)
+        { }
     }
 }
