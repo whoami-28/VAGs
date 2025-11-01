@@ -9,12 +9,13 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>VAGFabrick</RootNamespace>
     <AssemblyName>VAGFabrick</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -170,9 +171,9 @@
     </Compile>
     <Compile Include="AUDI.cs" />
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Migrations\20251028165806_InitialCreate.cs" />
-    <Compile Include="Migrations\20251028165806_InitialCreate.Designer.cs">
-      <DependentUpon>20251028165806_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\20251031155326_InitialCreate.cs" />
+    <Compile Include="Migrations\20251031155326_InitialCreate.Designer.cs">
+      <DependentUpon>20251031155326_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ApplicationDbContextModelSnapshot.cs" />
     <Compile Include="Volkswagen.cs" />
@@ -190,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
