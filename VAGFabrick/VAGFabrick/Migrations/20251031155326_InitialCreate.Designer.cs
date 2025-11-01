@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace VAGFabrick.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251028165806_InitialCreate")]
+    [Migration("20251031155326_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
